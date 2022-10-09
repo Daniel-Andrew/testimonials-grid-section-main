@@ -1,0 +1,121 @@
+body {
+    padding: 8% 12%;
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 600;
+    background-color: hsl(0, 0%, 81%);
+}
+.grid-container {
+    display: grid;
+    gap: 1.5em;
+    grid-auto-columns: minmax(100px, 1fr);
+    grid-template-areas: 
+    "one one two five"
+    "three four four five";
+}
+
+.grid-item {
+    border-radius: 10px;
+    padding: 6px 40px;
+    background-color: white;
+}
+
+.grid-item-1 {
+    grid-area: one;
+    background-color: hsl(263, 55%, 52%);
+    color: white;
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position-x: 80%;
+}
+
+.grid-item-2 {
+    grid-area: two;
+    background-color: hsl(217, 19%, 35%);
+    color: white;
+}
+
+.grid-item-3 {
+    grid-area: three;
+}
+
+.grid-item-4 {
+    grid-area: four;
+    background-color: hsl(219, 29%, 14%);
+    color: white;
+}
+
+.grid-item-5 {
+    grid-area: five;
+}
+
+div img {
+    float: left;
+    margin-right: 10px;
+    border-radius: 50%;
+    border:hsl(0, 0%, 90%) 4px solid;
+    width: 40px;
+}
+
+.grid-item-1 img{
+    border-color: hsl(263, 55%, 60%);
+}
+.grid-item-4 img{
+    border-color: hsl(263, 55%, 52%);
+}
+
+div p {
+    line-height: .2em;
+}
+
+div p:nth-of-type(1) {
+    font-weight: 600;
+    padding-top: 12px;
+    font-size: 14px;
+}
+
+div p:nth-of-type(2) {
+    opacity: 50%;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+h2 {
+    float: left;
+}
+
+.main-paragraph {
+    opacity: 70%;
+    font-weight: 500;
+    float: left;
+    margin-top: 0;
+}
+
+
+@media only screen and (max-width: 1300px) {
+    .grid-container {
+        display: grid;
+        gap: 1.2em;
+        grid-auto-columns: minmax(250px, 1fr);
+        grid-template-areas: 
+        "one one"
+        "two three" 
+        "four four"
+        "five five";
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    .grid-container {
+        display: grid;
+        gap: 1.5em;
+        grid-auto-columns: minmax(0, 1fr);
+        grid-template-areas: 
+        "one one"
+        "two two" 
+        "three three"
+        "four four"
+        "five five";
+    }
+}
